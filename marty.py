@@ -56,8 +56,8 @@ class Game(QMainWindow):
         def show_game_windows(self,checked):
                 
                 self.hide()
-                #my_marry = Marty("wifi", "192.168.0.100")
-                #my_marry.dance('right',3000,False)
+                my_marry = Marty("wifi", "192.168.0.100")
+                my_marry.dance('right',3000,False)
 
                 self.w = GameWindows()
                 self.w.show()
