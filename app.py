@@ -2,30 +2,32 @@ import sys
 
 from PyQt6 import QtGui
 from PyQt6.QtCore import QSize, Qt,QRect
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QVBoxLayout, QWidget,QHBoxLayout,QPushButton,QToolBar,QStatusBar
+from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QVBoxLayout, QWidget,QHBoxLayout,QPushButton,QToolBar,QStatusBar,QSlider
 from PyQt6.QtGui import QAction,QIcon
 from PyQt6 import QtCore
+from typing import Optional
 # Subclass QMainWindow to customize your application's main window
 class MainWindow(QMainWindow):
    def __init__(self):
         super().__init__()
-
-        icontitleName = "b.jpg"
         
-
         left = 500
         top = 200
         width = 300
         height = 250
 
         self.setWindowTitle("Marty")
-        self.setWindowIcon(QtGui.QIcon(icontitleName))
+        self.setWindowIcon(QtGui.QIcon("home"))
         self.setGeometry(left,top,width,height)
-      
-        toolbar =QToolBar("My main toolbar")
-        self.addToolBar(toolbar)
-        def onMyToolBarButtonClick(self,s):
-            print("click",s)
+
+ 
+        #def dance(self,side: str = 'right', move_time: int = 3000, blocking: Optional[bool] = None) -> bool:
+
+        #def wiggle(self,move_time: int = 4000, blocking: Optional[bool] = None) -> bool:
+
+        # Connectez les boutons à leurs fonctions respectives
+        #button1_line2_right.clicked.connect(self.dance)
+    
        
         main_layout= QHBoxLayout()
 
