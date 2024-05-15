@@ -1,5 +1,5 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget, QSlider, QLabel
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget, QSlider, QLabel, QHBoxLayout
 from PyQt6.QtGui import QKeyEvent
 from PyQt6.QtCore import Qt
 
@@ -13,6 +13,8 @@ class RobotController(QMainWindow):
         self.backward_button = QPushButton("Backward")
         self.left_button = QPushButton("Left")
         self.right_button = QPushButton("Right")
+        self.pivot_left_button = QPushButton("Pivot Left")
+        self.pivot_right_button = QPushButton("Pivot Right")
         self.stop_button = QPushButton("Stop")
 
         # Connectez les boutons à leurs fonctions respectives
@@ -20,6 +22,8 @@ class RobotController(QMainWindow):
         self.backward_button.clicked.connect(self.move_backward)
         self.left_button.clicked.connect(self.move_left)
         self.right_button.clicked.connect(self.move_right)
+        self.pivot_left_button.clicked.connect(self.pivot_left)
+        self.pivot_right_button.clicked.connect(self.pivot_right)
         self.stop_button.clicked.connect(self.stop_robot)
 
         # Créez un slider pour contrôler la vitesse du robot
@@ -36,12 +40,14 @@ class RobotController(QMainWindow):
         # Connectez le slider à la méthode de mise à jour de la vitesse
         self.speed_slider.valueChanged.connect(self.update_speed)
 
-        # Position des boutons et du slider
+        # Disposition des boutons et du slider
         layout = QVBoxLayout()
         layout.addWidget(self.forward_button)
         layout.addWidget(self.backward_button)
         layout.addWidget(self.left_button)
         layout.addWidget(self.right_button)
+        layout.addWidget(self.pivot_left_button)
+        layout.addWidget(self.pivot_right_button)
         layout.addWidget(self.stop_button)
         layout.addWidget(self.speed_slider)
         layout.addWidget(self.speed_label)
@@ -75,6 +81,14 @@ class RobotController(QMainWindow):
         print(f"Turning right at speed {self.speed}")
         # Code pour envoyer la commande de tourner à droite au robot
 
+    def pivot_left(self):
+        print(f"Pivoting left at speed {self.speed}")
+        # Code pour envoyer la commande de pivot à gauche au robot
+
+    def pivot_right(self):
+        print(f"Pivoting right at speed {self.speed}")
+        # Code pour envoyer la commande de pivot à droite au robot
+
     def stop_robot(self):
         print("Stopping robot")
         # Code pour envoyer la commande d'arrêt au robot
@@ -89,6 +103,10 @@ class RobotController(QMainWindow):
             self.move_left()
         elif event.key() == Qt.Key_D:
             self.move_right()
+        elif event.key() == Qt.Key_A:
+            self.pivot_left()
+        elif event.key() == Qt.Key_E:
+            self.pivot_right()
         elif event.key() == Qt.Key_Space:
             self.stop_robot()
 
