@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
         height = 250
 
         self.setWindowTitle("Marty")
-        self.setWindowIcon(QtGui.QIcon("home"))
+        self.setWindowIcon(QtGui.QIcon("images/home"))
         self.setGeometry(left,top,width,height)
 
  
@@ -37,7 +37,7 @@ class MainWindow(QMainWindow):
        
         button1_line1_left= QPushButton("",self)
         button1_line1_left.setGeometry(QRect(300,300,211,23))
-        button1_line1_left.setIcon(QtGui.QIcon("pivot_gauche"))
+        button1_line1_left.setIcon(QtGui.QIcon("images/pivot_gauche"))
         button1_line1_left.setIconSize(QtCore.QSize(40,40))
         button1_line1_left.setToolTip("This is Click Me")
         button1_line1_left.setStyleSheet(""" 
@@ -55,7 +55,7 @@ class MainWindow(QMainWindow):
         """)
         button2_line1_left= QPushButton("",self)
         button2_line1_left.setGeometry(QRect(300,300,211,23))
-        button2_line1_left.setIcon(QtGui.QIcon("haut"))
+        button2_line1_left.setIcon(QtGui.QIcon("images/haut"))
         button2_line1_left.setIconSize(QtCore.QSize(40,40))
         button2_line1_left.setToolTip("This is Click Me")
         button2_line1_left.setStyleSheet(""" 
@@ -73,7 +73,7 @@ class MainWindow(QMainWindow):
         """)
         button3_line1_left= QPushButton("",self)
         button3_line1_left.setGeometry(QRect(300,300,211,23))
-        button3_line1_left.setIcon(QtGui.QIcon("pivot_droit"))
+        button3_line1_left.setIcon(QtGui.QIcon("images/pivot_droit"))
         button3_line1_left.setIconSize(QtCore.QSize(40,40))
         button3_line1_left.setToolTip("This is Click Me")
         button3_line1_left.setStyleSheet(""" 
@@ -103,7 +103,7 @@ class MainWindow(QMainWindow):
 
         button1_line2_left= QPushButton("",self)
         button1_line2_left.setGeometry(QRect(300,300,211,23))
-        button1_line2_left.setIcon(QtGui.QIcon("gauche"))
+        button1_line2_left.setIcon(QtGui.QIcon("images/gauche"))
         button1_line2_left.setIconSize(QtCore.QSize(40,40))
         button1_line2_left.setToolTip("This is Click Me")
         button1_line2_left.setStyleSheet(""" 
@@ -122,7 +122,7 @@ class MainWindow(QMainWindow):
         
         button2_line2_left= QPushButton("",self)
         button2_line2_left.setGeometry(QRect(300,300,211,23))
-        button2_line2_left.setIcon(QtGui.QIcon("centre"))
+        button2_line2_left.setIcon(QtGui.QIcon("images/centre"))
         button2_line2_left.setIconSize(QtCore.QSize(40,40))
         button2_line2_left.setToolTip("This is Click Me")
         button2_line2_left.setStyleSheet(""" 
@@ -140,7 +140,7 @@ class MainWindow(QMainWindow):
         """)
         button3_line2_left= QPushButton("",self)
         button3_line2_left.setGeometry(QRect(300,300,211,23))
-        button3_line2_left.setIcon(QtGui.QIcon("droite"))
+        button3_line2_left.setIcon(QtGui.QIcon("images/droite"))
         button3_line2_left.setIconSize(QtCore.QSize(40,40))
         button3_line2_left.setToolTip("This is Click Me")
         button3_line2_left.setStyleSheet(""" 
@@ -168,7 +168,7 @@ class MainWindow(QMainWindow):
 
         button2_line3_left= QPushButton("",self)
         button2_line3_left.setGeometry(QRect(300,300,211,23))
-        button2_line3_left.setIcon(QtGui.QIcon("bas"))
+        button2_line3_left.setIcon(QtGui.QIcon("images/bas"))
         button2_line3_left.setIconSize(QtCore.QSize(40,40))
         button2_line3_left.setToolTip("This is Click Me")
         button2_line3_left.setStyleSheet(""" 
@@ -202,7 +202,7 @@ class MainWindow(QMainWindow):
         
         button1_line1_right= QPushButton("Get ready",self)
         button1_line1_right.setGeometry(QRect(300,300,211,23))
-        button1_line1_right.setIcon(QtGui.QIcon("get_ready"))
+        button1_line1_right.setIcon(QtGui.QIcon("images/get_ready"))
         button1_line1_right.setIconSize(QtCore.QSize(70,70))
         button1_line1_right.setToolTip("Marty is ready")
         button1_line1_right.setStyleSheet(""" 
@@ -222,7 +222,7 @@ class MainWindow(QMainWindow):
 
         button2_line1_right= QPushButton("Show-off",self)
         button2_line1_right.setGeometry(QRect(300,300,211,23))
-        button2_line1_right.setIcon(QtGui.QIcon("get_ready"))
+        button2_line1_right.setIcon(QtGui.QIcon("images/get_ready"))
         button2_line1_right.setIconSize(QtCore.QSize(70,70))
         button2_line1_right.setToolTip("Marty shows-off")
         button2_line1_right.setStyleSheet(""" 
@@ -241,7 +241,7 @@ class MainWindow(QMainWindow):
         """)
         button3_line1_right= QPushButton("Wave-left",self)
         button3_line1_right.setGeometry(QRect(300,300,211,23))
-        button3_line1_right.setIcon(QtGui.QIcon("get_ready"))
+        button3_line1_right.setIcon(QtGui.QIcon("images/get_ready"))
         button3_line1_right.setIconSize(QtCore.QSize(70,70))
         button3_line1_right.setToolTip("Marty Wave-left")
         button3_line1_right.setStyleSheet(""" 
@@ -260,7 +260,7 @@ class MainWindow(QMainWindow):
         """)
         button4_line1_right= QPushButton("Show-off",self)
         button4_line1_right.setGeometry(QRect(300,300,211,23))
-        button4_line1_right.setIcon(QtGui.QIcon("get_ready"))
+        button4_line1_right.setIcon(QtGui.QIcon("images/get_ready"))
         button4_line1_right.setIconSize(QtCore.QSize(70,70))
         button4_line1_right.setToolTip("Marty waves-right")
         button4_line1_right.setStyleSheet(""" 
@@ -289,7 +289,7 @@ class MainWindow(QMainWindow):
 
         button1_line2_right= QPushButton("Dance!",self)
         button1_line2_right.setGeometry(QRect(300,300,211,23))
-        button1_line2_right.setIcon(QtGui.QIcon("dance"))
+        button1_line2_right.setIcon(QtGui.QIcon("images/dance"))
         button1_line2_right.setIconSize(QtCore.QSize(70,70))
         button1_line2_right.setToolTip("Marty dances")
         button1_line2_right.setStyleSheet(""" 
@@ -309,7 +309,7 @@ class MainWindow(QMainWindow):
 
         button2_line2_right= QPushButton("Wiggle Eyes",self)
         button2_line2_right.setGeometry(QRect(300,300,211,23))
-        button2_line2_right.setIcon(QtGui.QIcon("wiggle"))
+        button2_line2_right.setIcon(QtGui.QIcon("images/wiggle"))
         button2_line2_right.setIconSize(QtCore.QSize(70,70))
         button2_line2_right.setToolTip("Marty wiggle eyes")
         button2_line2_right.setStyleSheet(""" 
@@ -328,7 +328,7 @@ class MainWindow(QMainWindow):
         """)
         button3_line2_right= QPushButton("Kick left",self)
         button3_line2_right.setGeometry(QRect(500,500,300,100))
-        button3_line2_right.setIcon(QtGui.QIcon("kick_left"))
+        button3_line2_right.setIcon(QtGui.QIcon("images/kick_left"))
         button3_line2_right.setIconSize(QtCore.QSize(70,70))
         button3_line2_right.setToolTip("Marty kicks left")
         button3_line2_right.setStyleSheet(""" 
@@ -347,7 +347,7 @@ class MainWindow(QMainWindow):
         """)
         button4_line2_right= QPushButton("Kick right",self)
         button4_line2_right.setGeometry(QRect(300,300,211,23))
-        button4_line2_right.setIcon(QtGui.QIcon("get_ready"))
+        button4_line2_right.setIcon(QtGui.QIcon("images/get_ready"))
         button4_line2_right.setIconSize(QtCore.QSize(70,70))
         button4_line2_right.setToolTip("Marty kick right")
         button4_line2_right.setStyleSheet(""" 
