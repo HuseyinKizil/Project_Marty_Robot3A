@@ -53,11 +53,10 @@ class Game(QMainWindow):
                 self.setCentralWidget(container)
 
          
-        def show_game_windows(self,checked):
-                
+        def show_game_windows(self,checked):  
                 self.hide()
-                my_marry = Marty("wifi", "192.168.0.100")
-                my_marry.dance('right',3000,False)
+                my_marry = Marty("wifi", "192.168.0.104")
+                my_marry.hello()
 
                 self.w = GameWindows()
                 self.w.show()
