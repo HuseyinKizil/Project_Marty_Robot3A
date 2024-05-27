@@ -1,7 +1,9 @@
 import sys
+from PyQt6 import QtCore
 from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget, QSlider, QLabel, QHBoxLayout
-from PyQt6.QtGui import QKeyEvent
 from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QKeyEvent
+
 
 class RobotController(QMainWindow):
     def __init__(self):
@@ -59,6 +61,23 @@ class RobotController(QMainWindow):
         # Initialiser la vitesse
         self.speed = self.speed_slider.value()
 
+    def keyPressEvent(self, event: QKeyEvent):
+        # touches clavier
+        if event.key() == Qt.Key_Z:
+            self.move_forward()
+        elif event.key() == Qt.Key_S:
+            self.move_backward()
+        elif event.key() == Qt.Key_Q:
+            self.move_left()
+        elif event.key() == Qt.Key_D:
+            self.move_right()
+        elif event.key() == Qt.Key_A:
+            self.pivot_left()
+        elif event.key() == Qt.Key_E:
+            self.pivot_right()
+        elif event.key() == Qt.Key_Space:
+            self.stop_robot()
+
     def update_speed(self):
         self.speed = self.speed_slider.value()
         self.speed_label.setText(f"Speed: {self.speed}")
@@ -93,23 +112,7 @@ class RobotController(QMainWindow):
         print("Stopping robot")
         # Code pour envoyer la commande d'arrêt au robot
 
-    def keyPressEvent(self, event: QKeyEvent):
-        # touches clavier
-        if event.key() == Qt.Key_Z:
-            self.move_forward()
-        elif event.key() == Qt.Key_S:
-            self.move_backward()
-        elif event.key() == Qt.Key_Q:
-            self.move_left()
-        elif event.key() == Qt.Key_D:
-            self.move_right()
-        elif event.key() == Qt.Key_A:
-            self.pivot_left()
-        elif event.key() == Qt.Key_E:
-            self.pivot_right()
-        elif event.key() == Qt.Key_Space:
-            self.stop_robot()
-
+    
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = RobotController()
