@@ -2,7 +2,8 @@ from PyQt6 import QtGui
 from PyQt6.QtCore import QSize, Qt, QRect
 from PyQt6.QtWidgets import QMainWindow, QLabel, QVBoxLayout, QWidget, QHBoxLayout, QSlider
 from PyQt6.QtGui import QKeySequence, QShortcut
-from layouts import create_left_buttons, create_right_buttons
+from layouts import create_left_buttons
+from layouts_right import create_right_buttons
 
 class MainWindow(QMainWindow):
     def __init__(self):
