@@ -178,13 +178,6 @@ def create_right_buttons(main_window):
     """)
     button2.clicked.connect(lambda: main_window.on_button_click("Show-off"))
 
-    right_layout_line1 = QHBoxLayout()
-    right_layout_line1.addWidget(button1)
-    right_layout_line1.addWidget(button2)
-    
-    container_right_line1 = QWidget()
-    container_right_line1.setLayout(right_layout_line1)
-    right_layout.addWidget(container_right_line1)
 
     button3 = QPushButton("Wave-left", main_window)
     button3.setIcon(QtGui.QIcon("images/get_ready"))
@@ -222,12 +215,102 @@ def create_right_buttons(main_window):
             color: white;
         }
     """)
-    button4.clicked.connect(lambda: main_window.on_button_click("Wave-right"))
+    button4.clicked.connect(lambda: main_window.on_button_click("Dance!"))
 
-    right_layout_line2 = QHBoxLayout()
-    right_layout_line2.addWidget(button3)
-    right_layout_line2.addWidget(button4)
+
+    right_layout_line1 = QHBoxLayout()
+    right_layout_line1.addWidget(button1)
+    right_layout_line1.addWidget(button2)
+    right_layout_line1.addWidget(button3)
+    right_layout_line1.addWidget(button4)
+
+    container_right_line1 = QWidget()
+    container_right_line1.setLayout(right_layout_line1)
+    right_layout.addWidget(container_right_line1)
+
+    button5 = QPushButton("Dance!", main_window)
+    button5.setIcon(QtGui.QIcon("images/dance"))
+    button5.setIconSize(QSize(70, 70))
+    button5.setToolTip("Marty Dance!")
+    button5.setStyleSheet(""" 
+        QPushButton {
+            font-size:16px;
+            background-color:"#87CEEB";
+            border: 1px solid black;
+            border-radius: 10px;
+        } 
+        QPushButton:hover {
+            font-size:18px;
+            background-color:"#00FFFF";
+            color: white;
+        }
+    """)
+    button5.clicked.connect(lambda: main_window.on_button_click("Dance!"))
+
+    button6 = QPushButton("Wiggle Eyses", main_window)
+    button6.setIcon(QtGui.QIcon("images/wiggle"))
+    button6.setIconSize(QSize(70, 70))
+    button6.setToolTip("Marty Wiggle Eyes")
+    button6.setStyleSheet(""" 
+        QPushButton {
+            font-size:16px;
+            background-color:"#87CEEB";
+            border: 1px solid black;
+            border-radius: 10px;
+        } 
+        QPushButton:hover {
+            font-size:18px;
+            background-color:"#00FFFF";
+            color: white;
+        }
+    """)
+    button6.clicked.connect(lambda: main_window.on_button_click("Wiggle Eyes"))
+
+    button7 = QPushButton("Kick Left", main_window)
+    button7.setIcon(QtGui.QIcon("images/kick_left"))
+    button7.setIconSize(QSize(70, 70))
+    button7.setToolTip("Marty Kick-left")
+    button7.setStyleSheet(""" 
+        QPushButton {
+            font-size:16px;
+            background-color:"#87CEEB";
+            border: 1px solid black;
+            border-radius: 10px;
+        } 
+        QPushButton:hover {
+            font-size:18px;
+            background-color:"#00FFFF";
+            color: white;
+        }
+    """)
+    button7.clicked.connect(lambda: main_window.on_button_click("Kick Left"))
+
+    button8 = QPushButton("Kick Right", main_window)
+    button8.setIcon(QtGui.QIcon("images/kick_right"))
+    button8.setIconSize(QSize(70, 70))
+    button8.setToolTip("Marty Kick right")
+    button8.setStyleSheet(""" 
+        QPushButton {
+            font-size:16px;
+            background-color:"#87CEEB";
+            border: 1px solid black;
+            border-radius: 10px;
+        } 
+        QPushButton:hover {
+            font-size:18px;
+            background-color:"#00FFFF";
+            color: white;
+        }
+    """)
+    button8.clicked.connect(lambda: main_window.on_button_click("Kick right"))
+
     
+    right_layout_line2 = QHBoxLayout()
+    right_layout_line2.addWidget(button5)
+    right_layout_line2.addWidget(button6)
+    right_layout_line2.addWidget(button7)
+    right_layout_line2.addWidget(button8)
+
     container_right_line2 = QWidget()
     container_right_line2.setLayout(right_layout_line2)
     right_layout.addWidget(container_right_line2)
