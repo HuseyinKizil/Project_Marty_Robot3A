@@ -6,6 +6,7 @@ from PyQt6.QtGui import QColor
 from martypy import Marty
 from widgets import MainWindow
 
+
 # Subclass QMainWindow to customize your application's main window
 class Game(QMainWindow):
         
@@ -55,8 +56,8 @@ class Game(QMainWindow):
          
         def show_game_windows(self,checked):  
                 self.hide()
-                #my_marry = Marty("wifi", "192.168.0.13")
-                #my_marry.hello()
+                my_marty = Marty("wifi","192.168.0.100")
+                my_marty.hello()
 
                 self.w = MainWindow()
                 self.w.show()

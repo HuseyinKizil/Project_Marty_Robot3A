@@ -4,6 +4,7 @@ from PyQt6.QtWidgets import QMainWindow, QLabel, QVBoxLayout, QWidget, QHBoxLayo
 from PyQt6.QtGui import QKeySequence, QShortcut
 from layouts import create_left_buttons
 from layouts_right import create_right_buttons
+from martypy import Marty
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -52,3 +53,20 @@ class MainWindow(QMainWindow):
 
     def on_button_click(self, message):
         print(f"Button clicked: {message}")
+        
+    def danse(self):
+        print("Marty danse stp")
+        my_marty = Marty("wifi","192.168.0.100")
+        my_marty.dance()
+        
+    def get_ready(self):
+        my_marty = Marty("wifi","192.168.0.100")
+        my_marty.get_ready()
+        
+    def wave_left(self):
+        my_marty = Marty("wifi","192.168.0.100")
+        my_marty.arms(left_angle=250, right_angle=0,move_time=2500)
+        
+    def wave_right(self):
+        my_marty = Marty("wifi","192.168.0.100")
+        my_marty.arms(left_angle=0, right_angle=150,move_time=2500)

@@ -1,6 +1,7 @@
 from PyQt6.QtCore import QSize, Qt
 from PyQt6.QtWidgets import QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QWidget, QSlider
 from PyQt6 import QtGui
+from martypy import Marty
 
 def create_button(icon_path, tooltip, stylesheet, callback, size=40):
     button = QPushButton("")
@@ -50,7 +51,7 @@ def create_right_buttons(main_window):
             color: white;
         }
     """)
-    button2.clicked.connect(lambda: main_window.on_button_click("Show-off"))
+    button2.clicked.connect(main_window.get_ready)
     
     button3 = QPushButton("Wave-left", main_window)
     button3.setIcon(QtGui.QIcon("images/get_ready"))
@@ -69,7 +70,7 @@ def create_right_buttons(main_window):
             color: white;
         }
     """)
-    button3.clicked.connect(lambda: main_window.on_button_click("Wave-left"))
+    button3.clicked.connect(main_window.wave_left)
     
     button4 = QPushButton("Wave-right", main_window)
     button4.setIcon(QtGui.QIcon("images/get_ready"))
@@ -88,7 +89,7 @@ def create_right_buttons(main_window):
             color: white;
         }
     """)
-    button4.clicked.connect(lambda: main_window.on_button_click("Wave-right"))
+    button4.clicked.connect(main_window.wave_right)
 
     right_layout_line1 = QHBoxLayout()
     right_layout_line1.addWidget(button1)
@@ -117,12 +118,13 @@ def create_right_buttons(main_window):
             color: white;
         }
     """)
-    button5.clicked.connect(lambda: main_window.on_button_click("Dance"))
+    button5.clicked.connect(main_window.danse)
+
     
     button6 = QPushButton("Wiggle Eyes", main_window)
     button6.setIcon(QtGui.QIcon("images/get_ready"))
     button6.setIconSize(QSize(70, 70))
-    button4.setToolTip("Marty Wave-right")
+    button6.setToolTip("Marty Wave-right")
     button6.setStyleSheet(""" 
         QPushButton {
             font-size:16px;
@@ -223,8 +225,7 @@ def create_right_buttons(main_window):
     container_right_line3 = QWidget()
     container_right_line3.setLayout(right_layout_line3)
     right_layout.addWidget(container_right_line3)
-    
-    
-
 
     return right_layout
+
+    
