@@ -1,10 +1,12 @@
 import sys
-
+from martypy import Marty
 from PyQt6 import QtGui,QtCore
-from PyQt6.QtCore import QSize, Qt,QRect
+from PyQt6.QtCore import QSize, Qt,QRect,QTimer
 from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QVBoxLayout, QWidget,QHBoxLayout,QPushButton,QToolBar,QStatusBar,QSlider
 from PyQt6.QtGui import QAction,QIcon,QKeyEvent
 from typing import Optional
+from widgets import MainWindow
+
 
 # Subclass QMainWindow to customize your application's main window
 class MainWindow(QMainWindow):
@@ -14,7 +16,8 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Marty")
         self.setWindowIcon(QtGui.QIcon("images/home"))
         self.setGeometry(500,200,300,250)
-       
+        self.setStyleSheet("background-color:#DFF2FF")
+        
         main_layout= QHBoxLayout()
 
         left_layout= QVBoxLayout()
@@ -346,7 +349,9 @@ class MainWindow(QMainWindow):
         def on_button_click(self):
         # Méthode appelée lorsque le bouton est cliqué
             print("Le bouton a été cliqué!")
+      
         self.on_button_click = on_button_click
+      
         button4_line2_right.clicked.connect(self.on_button_click)
    
         right_layout_line2.addWidget(button1_line2_right)
@@ -389,11 +394,12 @@ class MainWindow(QMainWindow):
 
         self.slider_label = QLabel("Valeur de la vitesse: 50")
         right_layout_line4.addWidget(self.slider_label)
+        
         container_right_line4 = QWidget()
         container_right_line4.setLayout(right_layout_line4)
         right_layout.addWidget(container_right_line4)
-
-
+            
+        
         container_right = QWidget()
         container_right.setLayout(right_layout)
 
