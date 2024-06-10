@@ -56,7 +56,7 @@ class Game(QMainWindow):
          
         def show_game_windows(self,checked):  
                 self.hide()
-                my_marty = Marty("wifi","192.168.0.106")
+                my_marty = Marty("wifi","192.168.0.107")
                 my_marty.hello()
 
                 self.w = MainWindow()

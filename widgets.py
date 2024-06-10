@@ -120,8 +120,15 @@ class MainWindow(QMainWindow):
 
 
     def update_detected_colors(self):
-        my_marty = Marty("wifi","192.168.0.100")
+        my_marty = Marty("wifi","192.168.0.107")
         color = my_marty.get_detected_color()  # Assuming this method exists
         if color and color not in self.detected_colors:
             self.detected_colors.append(color)
             self.color_label.setText(f"Couleurs détectées: {', '.join(self.detected_colors)}")
+
+
+    def update_battery_level(self):
+        my_marty = Marty("wifi","192.168.0.107")
+        battery_level = my_marty.get_battery_level()  # Assuming this method exists
+        self.battery_label.setText(f"Niveau de la batterie: {battery_level}%")
+        QTimer.singleShot(10000, self.update_battery_level)  # Update every 60 seconds
