@@ -12,7 +12,7 @@ class Game(QMainWindow):
         
         def __init__(self):
                 super().__init__()
-
+                        
                 self.setWindowTitle("Marty")
                 self.setGeometry(0,0,500,300)
                 self.setStyleSheet("background-color: cyan")
@@ -56,7 +56,7 @@ class Game(QMainWindow):
          
         def show_game_windows(self,checked):  
                 self.hide()
-                my_marty = Marty("wifi","192.168.0.100")
+                my_marty = Marty("wifi","192.168.0.106")
                 my_marty.hello()
 
                 self.w = MainWindow()
