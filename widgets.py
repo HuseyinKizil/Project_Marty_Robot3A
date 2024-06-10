@@ -116,3 +116,12 @@ class MainWindow(QMainWindow):
         
     def show_off(self):
         self.my_marty.lean(direction="forward", move_time=1 * 1000)
+
+
+
+    def update_detected_colors(self):
+        my_marty = Marty("wifi","192.168.0.100")
+        color = my_marty.get_detected_color()  # Assuming this method exists
+        if color and color not in self.detected_colors:
+            self.detected_colors.append(color)
+            self.color_label.setText(f"Couleurs détectées: {', '.join(self.detected_colors)}")
